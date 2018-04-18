@@ -8,15 +8,50 @@ services:
     start_on_create: true
     lb_config:
       certs: []
-      default_cert: mattkirwancom
+      default_cert: cert_mattkirwan
       port_rules:
       - hostname: mattkirwan.com
-        path: /
+        path: /.well-known/acme-challenge
         priority: 1
+        protocol: http
+        service: letsencrypt/letsencrypt
+        source_port: 80
+        target_port: 80
+      - hostname: www.mattkirwan.com
+        path: /.well-known/acme-challenge
+        priority: 2
+        protocol: http
+        service: letsencrypt/letsencrypt
+        source_port: 80
+        target_port: 80
+      - hostname: mattkirwan.com
+        path: /
+        priority: 3
         protocol: https
         service: mattkirwancom
         source_port: 443
         target_port: 80
+      - hostname: mattkirwan.com
+        path: /
+        priority: 4
+        protocol: http
+        service: mattkirwancom
+        source_port: 80
+        target_port: 8080
+      - hostname: www.mattkirwan.com
+        path: /
+        priority: 5
+        protocol: http
+        service: mattkirwancom
+        source_port: 80
+        target_port: 8080
+      - hostname: www.mattkirwan.com
+        path: /
+        priority: 6
+        protocol: https
+        service: mattkirwancom
+        source_port: 443
+        target_port: 8080
     health_check:
       healthy_threshold: 2
       response_timeout: 2000

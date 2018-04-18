@@ -14,13 +14,13 @@ services:
       AZURE_RESOURCE_GROUP: ''
       AZURE_SUBSCRIPTION_ID: ''
       AZURE_TENANT_ID: ''
-      CERT_NAME: mattkirwancom
+      CERT_NAME: cert_mattkirwan
       CLOUDFLARE_EMAIL: ''
       CLOUDFLARE_KEY: ''
       DNSIMPLE_EMAIL: ''
       DNSIMPLE_KEY: ''
       DNS_RESOLVERS: 8.8.8.8:53,8.8.4.4:53
-      DOMAINS: mattkirwan.com
+      DOMAINS: mattkirwan.com,www.mattkirwan.com
       DO_ACCESS_TOKEN: ''
       DYN_CUSTOMER_NAME: ''
       DYN_PASSWORD: ''
