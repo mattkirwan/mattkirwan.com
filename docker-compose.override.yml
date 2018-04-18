@@ -4,7 +4,7 @@ services:
     volumes:
       - ./env/dev/conf/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./env/dev/conf/mattkirwan.test.conf:/etc/nginx/conf.d/mattkirwan.test.conf:ro
-      - ./public:/usr/share/nginx/html
+      - ./public:/var/www/mattkirwan.test
       - ./env/dev/ssl:/etc/nginx/ssl
     environment:
       DEBUG: 'true'

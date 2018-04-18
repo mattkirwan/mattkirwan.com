@@ -1,0 +1,16 @@
+version: '2'
+services:
+  mattkirwancom:
+    image: lksoia89/site:0.0.4
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  mattkirwancom-lb:
+    image: rancher/lb-service-haproxy:v0.7.15
+    ports:
+    - 443:443/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin,agent
+      io.rancher.container.agent_service.drain_provider: 'true'
+      io.rancher.container.create_agent: 'true'

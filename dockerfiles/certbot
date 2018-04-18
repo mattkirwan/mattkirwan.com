@@ -1,0 +1,2 @@
+FROM certbot/certbot:latest
+CMD ["certbot/certbot", "certonly --email lijawdb6r5a@fastmail.uk -d mattkirwan.com --agree-tos --no-eff-email"]

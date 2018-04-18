@@ -1,0 +1,27 @@
+version: '2'
+services:
+  mattkirwancom:
+    scale: 2
+    start_on_create: true
+  mattkirwancom-lb:
+    scale: 1
+    start_on_create: true
+    lb_config:
+      certs: []
+      default_cert: mattkirwancom
+      port_rules:
+      - hostname: mattkirwan.com
+        path: /
+        priority: 1
+        protocol: https
+        service: mattkirwancom
+        source_port: 443
+        target_port: 80
+    health_check:
+      healthy_threshold: 2
+      response_timeout: 2000
+      port: 42
+      unhealthy_threshold: 3
+      initializing_timeout: 60000
+      interval: 2000
+      reinitializing_timeout: 60000
