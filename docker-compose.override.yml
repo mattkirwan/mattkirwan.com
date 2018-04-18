@@ -1,6 +1,6 @@
 version: "2"
 services:
-  nginx:
+  site:
     volumes:
       - ./env/dev/conf/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./env/dev/conf/mattkirwan.test.conf:/etc/nginx/conf.d/mattkirwan.test.conf:ro
