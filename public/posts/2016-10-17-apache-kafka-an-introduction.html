@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Matt Kirwan - Software Engineer</title>
+        <title>Matt Kirwan - An Introduction to Apache Kafka</title>
         <link rel="stylesheet" type="text/css" href="./../style.css" />
     </head>
     <body>
@@ -44,7 +44,7 @@
                     <li>You then <i>consume</i> that <b>message</b>.</li>
                 </ol>
 
-                <img src="/assets/2016-10-17/apache_kafka_black_box.png" title="Right now Apache Kafka is a black box to us" />
+                <img src="./../assets/2016-10-17/apache_kafka_black_box.png" title="Right now Apache Kafka is a black box to us" />
 
                 <h2>Well, that was easy. Is that it?</h2>
 
@@ -68,7 +68,7 @@
                 
                 <p>To give you some idea of throughput, a single Kafka broker is capable of reading and writing hundreds of megabytes of data per second.</p>
                 
-                <img src="/assets/2016-10-17/apache_kafka_cluster_and_brokers.png" title="An Apache Kafka cluster containing multiple brokers" />
+                <img src="./../assets/2016-10-17/apache_kafka_cluster_and_brokers.png" title="An Apache Kafka cluster containing multiple brokers" />
 
                 
                 <h2>Apache Zookeeper</h2>
@@ -107,7 +107,7 @@
 
                 <p>At its most basic level, if we were to produce a message onto a topic with a single partition that message would simply be placed onto the end of the topic.</p>
 
-                <img src="/assets/2016-10-17/apache_kafka_topic_partition_simple.png" title="Kafka topic with a single partition" />
+                <img src="./../assets/2016-10-17/apache_kafka_topic_partition_simple.png" title="Kafka topic with a single partition" />
 
                 <p>Some crucial points to note:</p>
 
@@ -135,7 +135,7 @@
 
                 <p>Breaking it down to a really simple (and unrealistic) example below, we can see that messages from a single partition can only be sent to a single instance (<b>consumer 1</b>) from a single consumer group (<b>mygroup</b>). Consumer 2 will never receive any messages from the topic <b>anintrotokafka</b> while there is only one partition and consumer 1 is up and running:</p>
 
-                <img src="/assets/2016-10-17/apache_kafka_consumer_group_simple.png" title="Multiple consumers with the same consumer group and a single partition" />
+                <img src="./../assets/2016-10-17/apache_kafka_consumer_group_simple.png" title="Multiple consumers with the same consumer group and a single partition" />
 
                 <h2>A Summary & tldr Video</h2>
 
