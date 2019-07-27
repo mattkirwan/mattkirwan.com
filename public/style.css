@@ -1,38 +1,38 @@
 body{
-    margin:30px auto;
-    max-width:650px;
-    line-height:1.6;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    color:rgb(66, 66, 66);
-    padding:0 15px;
-    font-size: 1em;
+    margin:2em auto;
+    max-width:750px;
+    line-height:1.7;
+    /* font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; */
+    font-family: 'Arial';
+    color:rgb(80, 80, 80);
+    padding:0 1em;
+    font-size: 1.3em;
     background-color: rgb(250, 250, 250);
 }
 
 a {
-    color: rgb(54, 156, 196)
+    color: rgb(54, 132, 196)
 }
 
 h1,h2{
-    line-height:1.2;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-weight: 500;
 }
 
-nav#site {
-    border-bottom: #ccc 1px solid;
-}
-
 header#site h1 {
-    margin: 20px 0 0 0;
+    font-size: 2.1em;
+    line-height: 1.3em;
+    color: rgb(49, 49, 49);
+    letter-spacing: 0.015em;
 }
 header#site h1, header h2 {
-    text-align: center;
+    text-align: right;
 }
 header#site h2 {
     font-weight: 300;
-    font-size: 1em;
+    font-size: 0.9em;
+    line-height: 1em;
 }
 
 nav {
@@ -41,8 +41,8 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 10px 0;
-    padding: 5px 0;
+    margin: 2.4em 0 2em 0;
+    padding: 0 0;
 }
 
 nav ul li {
@@ -50,26 +50,25 @@ nav ul li {
 }
 
 main {
-    margin: 20px 0;
+    margin: 2em 0;
 }
 
 main header h1 {
-    font-size: 1.9em;
-    color:rgb(66, 66, 66);
+    font-size: 1.8em;
     margin: 10px 0;
     padding: 20px 0 0 0;
+    font-weight: 600;
 }
 
 main article h2 {
-    font-size: 1.6em;
-    color:rgb(66, 66, 66);
+    font-size: 1.7em;
     margin: 17px 0;
     padding: 20px 0 0 0;
 }
 
 main header time {
-    font-size: 0.9em;
-    color:rgb(66, 66, 66);
+    font-size: 1em;
+    font-style: italic;
 }
 
 main article img {
